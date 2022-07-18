@@ -9,12 +9,12 @@ No configuration needed.
 Installation
 ==========
 * make sure that `Docker` is installed
-* go to app main folder and excute `docker-compose up`
+* in app main folder execute `docker-compose up`
 
 Usage
 ==========
 * navigate to `http://localhost:3000` to use app
-* dragg tasks to change container
+* drag tasks to change container
 * click task to edit
   
 
