@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14
+    restart: always    
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=todo_password
+      - POSTGRES_USER=todo_user
+      - POSTGRES_DB=todo_db
+
+  ui:
+    image: todo_ui:dev
+    container_name: todo_ui
+    restart: always
+    build:
+      context: .
+      dockerfile: ./ui/Dockerfile
+    volumes:
+      - 'ui:/app'
+    ports:
+      - 3000:3000 
+
+  api:
+    image: todo_api:dev
+    container_name: todo_api
+    restart: always
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    volumes:
+      - "api:/app"
+    ports:
+      - 8000:8000
+    depends_on:
+      - postgres
+    links:
+      - postgres
+
+volumes:
+  postgres:
+    name: todo_db_data
+  ui:
+    name: todo_ui_data
+  api:
+    name: todo_api_data

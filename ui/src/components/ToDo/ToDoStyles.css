@@ -1,0 +1,65 @@
+.todo_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.todo_item_placeholder {
+  margin: 10px 5px;
+  border: 1px dashed #dadada;
+  position: relative;
+}
+
+.todo_item_placeholder #CardContent {
+  padding-bottom: 10px;
+  color: rgba(0,0,0,0.15);
+}
+
+.todo_item_placeholder #IconButton {
+  color: rgba(0,0,0,0.15);
+}
+
+.todo_item {
+  margin: 10px 5px;
+  border: 1px solid #dadada;
+  position: relative;
+}
+
+.todo_item #CardContent,
+.todo_item_placeholder #CardContent {
+  padding-bottom: 10px;
+}
+
+.todo_item #IconButton,
+.todo_item_placeholder #IconButton {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.todo_item span,
+.todo_item_placeholder span {
+  position: absolute;
+  margin-left: 10px;
+}
+
+.todo_container {
+  width: 100%;
+}
+
+.todo_container_title {
+  margin-left: 25px;
+  position: relative;
+}
+
+.todo_container_title #IconButton {
+  position: absolute;
+  right: 15px;
+  top: -5px;
+}
+
+.todo_container_list {
+  background: white;
+  padding: 10px;
+  margin: 10px;
+  flex: 1;
+}
