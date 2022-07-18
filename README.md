@@ -8,7 +8,7 @@ No configuration needed.
 
 Installation
 ==========
-* make sure that `Docker` is installed
+* make sure that `Docker` is running
 * in app main folder execute `docker-compose up`
 
 Usage
